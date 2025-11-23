@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
                 Contact Us
               </Nav.Link>
               <img
-                src="/images/Food/Halal.jpg"
+                src="/images/Fusion_Food/Halal.jpg"
                 alt="Halal Certified"
                 className="halal-nav-logo"
               />

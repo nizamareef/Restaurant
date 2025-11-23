@@ -26,7 +26,7 @@ const Home: React.FC = () => {
       {/* Hero Section */}
       <div className="hero-section position-relative fade-section">
         <img
-          src="/images/Food/Home1.jpg"
+          src="/images/Fusion_Food/Home1.jpg"
           alt="Hero"
           className="background-video"
         />
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
           <Col md={4}>
             <Link to="/menu#Blended_Drinks" className="text-decoration-none">
               <img
-                src="/images/Food/Drinks.png"
+                src="/images/Fusion_Food/Drinks.png"
                 className="img-fluid rounded shadow-sm mb-2"
                 alt="Refreshing Drinks"
               />
@@ -84,7 +84,7 @@ const Home: React.FC = () => {
           <Col md={4}>
             <Link to="/menu#Food" className="text-decoration-none">
               <img
-                src="/images/Food/Home2.jpg"
+                src="/images/Fusion_Food/Home2.jpg"
                 className="img-fluid rounded shadow-sm mb-2"
                 alt="Delightful Bites"
               />
