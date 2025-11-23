@@ -3,8 +3,8 @@ import { Button, Row, Col, Card } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const categories = [
-  "Food",
-  "Ice Creams & Milk Shakes",
+  "Fusion Food",
+  "Ice Creams and Milk Shakes",
   "Milk Teas",
   "Matchas",
   "Crafted Teas",
@@ -20,7 +20,7 @@ interface MenuGridProps {
 }
 
 const menuItems: Record<Category, string[]> = {
-  Food: [
+  "Fusion Food": [
     "Fries",
     "Samosa",
     "Cheese Stick",
@@ -44,7 +44,7 @@ const menuItems: Record<Category, string[]> = {
     "Chicken Biryani",
   ],
 
-  "Ice Creams & Milk Shakes": [
+  "Ice Creams and Milk Shakes": [
   
     // Signature Soft-Serve Ice Creams
     "Minions Treats",
@@ -116,7 +116,7 @@ const getImagePath = (item: string, category: string) => {
 
 const MenuGrid: React.FC<MenuGridProps> = ({ initialCategory }) => {
   const [selectedCategory, setSelectedCategory] = useState<Category>(
-    initialCategory || "Food"
+    initialCategory || "Fusion Food"
   );
 
   useEffect(() => {
@@ -150,7 +150,7 @@ const MenuGrid: React.FC<MenuGridProps> = ({ initialCategory }) => {
       </div>
 
       {/* Ice Cream Info Box */}
-      {selectedCategory === "Ice Creams & Milk Shakes" && (
+      {selectedCategory === "Ice Creams and Milk Shakes" && (
         <div
           style={{
             backgroundColor: "#f8f9fa",
