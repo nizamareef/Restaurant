@@ -25,60 +25,91 @@ interface MenuGridProps {
 }
 
 const menuItems: Record<Category, MenuItem[]> = {
-  "Fusion Food": [
-    { name: "Fries", description: "Crispy golden fries served hot." },
-    { name: "Samosa", description: "Fried pastry stuffed with spiced potatoes." },
-    { name: "Cheese Stick", description: "Crunchy mozzarella sticks with dipping sauce." },
-    { name: "Chicken 65", description: "Spicy fried chicken tossed with flavorful spices." },
-    { name: "Falafel", description: "Crispy chickpea fritters served with dipping sauce." },
-    { name: "Chicken Cheese Sandwich", description: "Grilled sandwich filled with chicken and cheese." },
-    { name: "Meat Ball Sandwich", description: "Juicy meatballs served in a toasted sandwich." },
-    { name: "Chicken Shawarma Wrap", description: "Seasoned chicken wrapped in soft bread with sauce." },
-    { name: "Gyro Wrap", description: "Tender gyro meat with fresh vegetables and sauce." },
-    { name: "Falafel Wrap", description: "Falafel wrapped with veggies and tahini sauce." },
-  ],
 
-  "Ice Creams and Milk Shakes": [
-    { name: "Minions Treats", description: "Soft serve ice cream topped with cereal crunch." },
-    { name: "Strawberry Shortcake", description: "Strawberry ice cream blended with cookie crumble." },
-    { name: "Fruity Tooty", description: "Colorful cereal blended into creamy ice cream." },
-    { name: "Thunder Buddies", description: "Chocolatey ice cream topped with crunchy treats." },
-    { name: "Cookies & Cream", description: "Classic cookies blended with rich vanilla ice cream." },
-  ],
+"Fusion Food": [
+{ name: "Fries", description: "Golden crispy fries perfectly seasoned and served hot." },
+{ name: "Samosa", description: "Crispy pastry pockets filled with spiced potatoes." },
+{ name: "Cheese Stick", description: "Crunchy mozzarella sticks with gooey cheese center." },
+{ name: "Chicken 65", description: "Spicy fried chicken tossed with bold aromatic spices." },
+{ name: "Falafel", description: "Crispy chickpea fritters packed with herbs and flavor." },
+{ name: "Chicken Cheese Sandwich", description: "Grilled sandwich filled with tender chicken and melted cheese." },
+{ name: "Meat Ball Sandwich", description: "Savory meatballs served inside toasted bread." },
+{ name: "Chicken Shawarma Wrap", description: "Flavorful marinated chicken wrapped with veggies and sauce." },
+{ name: "Gyro Wrap", description: "Mediterranean gyro meat wrapped with fresh vegetables." },
+{ name: "Falafel Wrap", description: "Falafel wrapped with crisp vegetables and creamy tahini." },
+{ name: "Greek Salad", description: "Fresh vegetables tossed with olives and feta cheese." },
+{ name: "Chicken Salad", description: "Fresh greens topped with tender grilled chicken." },
+{ name: "Butter Chicken Masala", description: "Rich creamy tomato curry with tender chicken." },
+{ name: "Chicken Tikka Masala", description: "Grilled chicken simmered in bold masala sauce." },
+{ name: "Plain Naan", description: "Soft fluffy traditional flatbread baked fresh." },
+{ name: "Paneer Butter Masala", description: "Creamy paneer curry with aromatic spices." },
+{ name: "Garlic Naan", description: "Fresh naan bread brushed with butter and garlic." },
+{ name: "Goat & Chicken Haleem", description: "Slow cooked blend of meat, lentils and spices." },
+{ name: "Goat Biryani", description: "Fragrant basmati rice cooked with tender goat." },
+{ name: "Shirazi Salad", description: "Refreshing Persian cucumber and tomato salad." },
+{ name: "Chicken Biryani", description: "Spiced basmati rice layered with tender chicken." },
+],
 
-  "Milk Teas": [
-    { name: "Thai Tea", description: "Sweet creamy Thai tea with rich flavor." },
-    { name: "Brown Sugar Milk Tea", description: "Milk tea infused with caramelized brown sugar." },
-    { name: "Pink Brush", description: "Creamy milk tea with a fruity twist." },
-    { name: "Jasmine Milk Tea", description: "Fragrant jasmine tea blended with milk." },
-  ],
+"Ice Creams and Milk Shakes": [
+{ name: "Minions Treats", description: "Fun soft serve topped with colorful cereal crunch." },
+{ name: "Strawberry Shortcake", description: "Strawberry ice cream blended with cookie crumble." },
+{ name: "Fruity Tooty", description: "Vanilla ice cream loaded with fruity cereal flavor." },
+{ name: "Thunder Buddies", description: "Chocolate lover’s soft serve topped with crunchy treats." },
+{ name: "Cookies & Cream", description: "Creamy vanilla ice cream filled with cookie pieces." },
+{ name: "Caramel Apple", description: "Sweet caramel blended with apple flavor." },
+{ name: "Mint Chocolate", description: "Cool mint ice cream with chocolate chips." },
+{ name: "Chocoholic", description: "Rich chocolate ice cream for chocolate lovers." },
+{ name: "Cookie Crumble", description: "Velvety ice cream topped with cookie crumbs." },
+{ name: "Matcha Madness", description: "Creamy ice cream infused with matcha flavor." },
+],
 
-  Matchas: [
-    { name: "Sweet Matcha", description: "Smooth ceremonial matcha with light sweetness." },
-    { name: "Strawberry Matcha Latte", description: "Layered matcha and strawberry milk." },
-    { name: "Ube Coconut Matcha", description: "Creamy coconut matcha with ube flavor." },
-  ],
+"Milk Teas": [
+{ name: "Thai Tea", description: "Sweet creamy Thai tea with bold flavor." },
+{ name: "Brown Sugar Milk Tea", description: "Milk tea infused with caramelized brown sugar." },
+{ name: "Pink Brush", description: "Creamy milk tea with fruity sweetness." },
+{ name: "Jasmine Milk Tea", description: "Floral jasmine tea blended with milk." },
+{ name: "Taro Milk Tea", description: "Smooth taro flavored milk tea." },
+{ name: "Chai Latte", description: "Warm spiced chai blended with creamy milk." },
+{ name: "Caramel Matcha Latte", description: "Matcha latte sweetened with caramel." },
+],
 
-  "Crafted Teas": [
-    { name: "Mango Black Tea", description: "Refreshing black tea infused with mango." },
-    { name: "Jasmine Green Tea", description: "Light floral green tea." },
-  ],
+Matchas: [
+{ name: "Sweet Matcha", description: "Smooth ceremonial matcha with gentle sweetness." },
+{ name: "Strawberry Matcha Latte", description: "Layered strawberry and matcha latte." },
+{ name: "Ube Coconut Matcha", description: "Matcha blended with creamy ube coconut." },
+{ name: "Jasmine Matcha Latte", description: "Matcha latte infused with jasmine tea." },
+{ name: "Blueberry Matcha Lemonade", description: "Refreshing lemonade with matcha and blueberries." },
+],
 
-  "Blended Drinks": [
-    { name: "Taro Crush", description: "Blended taro drink with creamy texture." },
-    { name: "Strawberry Cream", description: "Smooth strawberry blended drink." },
-  ],
+"Crafted Teas": [
+{ name: "Mango Black Tea", description: "Black tea infused with tropical mango." },
+{ name: "Jasmine Green Tea", description: "Light green tea with floral jasmine aroma." },
+{ name: "Chrysanthemum Immuni-Tea", description: "Traditional herbal chrysanthemum tea." },
+{ name: "Butterfly Rose Lemonade", description: "Color changing lemonade with butterfly pea flower." },
+],
 
-  "Caffeine-Free": [
-    { name: "Rose Milk Latte", description: "Creamy milk drink infused with rose." },
-    { name: "Blueberry Strawberry Lemonade", description: "Fresh lemonade with berry flavors." },
-  ],
+"Blended Drinks": [
+{ name: "Taro Crush", description: "Blended taro drink with creamy texture." },
+{ name: "Strawberry Cream", description: "Creamy strawberry blended beverage." },
+{ name: "Brown Sugar Crush", description: "Sweet brown sugar blended drink." },
+{ name: "Thai Tea Crush", description: "Frozen Thai tea blended into a creamy treat." },
+],
 
-  Coffees: [
-    { name: "Signature House Coffee", description: "Our signature brewed coffee blend." },
-    { name: "Matcha Coffee", description: "Unique fusion of matcha and coffee." },
-    { name: "Lavender Coffee", description: "Smooth coffee infused with lavender aroma." },
-  ],
+"Caffeine-Free": [
+{ name: "Rose Milk Latte", description: "Milk drink infused with delicate rose flavor." },
+{ name: "Blueberry Strawberry Lemonade", description: "Berry lemonade bursting with fresh flavor." },
+{ name: "Honey Chrysanthemum", description: "Herbal tea sweetened with honey." },
+{ name: "Butterfly Rose Lemonade", description: "Butterfly tea lemonade with floral rose notes." },
+],
+
+Coffees: [
+{ name: "Signature House Coffee", description: "Our signature smooth brewed coffee blend." },
+{ name: "Matcha Coffee", description: "Unique fusion of matcha and coffee." },
+{ name: "Lavender Coffee", description: "Coffee infused with calming lavender aroma." },
+{ name: "Basic House Coffee", description: "Classic house brewed coffee." },
+{ name: "Brewed Coffee", description: "Fresh brewed coffee with rich aroma." },
+{ name: "Honey Chrysanthemum Americano", description: "Americano sweetened with honey chrysanthemum." },
+],
 };
 
 const getImagePath = (item: string, category: string) => {
