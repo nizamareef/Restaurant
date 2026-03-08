@@ -1,8 +1,10 @@
+// src/pages/Menu.tsx
 import React from "react";
 import { useLocation } from "react-router-dom";
 import MenuGrid from "../components/MenuGrid";
 
 const Menu: React.FC = () => {
+
   const location = useLocation();
   const params = new URLSearchParams(location.search);
 
@@ -20,9 +22,11 @@ const Menu: React.FC = () => {
   type Category = (typeof validCategories)[number];
 
   const param = params.get("category");
-  const category: Category = validCategories.includes(param as Category)
-    ? (param as Category)
-    : "Fusion Food";
+
+  const category: Category =
+    validCategories.includes(param as Category)
+      ? (param as Category)
+      : "Fusion Food";
 
   return <MenuGrid initialCategory={category} />;
 };
