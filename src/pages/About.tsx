@@ -6,47 +6,59 @@ const About: React.FC = () => {
   return (
     <section className="py-5 bg-light">
       <Container>
-        <h2 className="text-center text-success fw-bold mb-5">About BelAfia</h2>
+
+        {/* Heading */}
+        <h2 className="text-center text-success fw-bold mb-4 mb-md-5">
+          About BelAfia
+        </h2>
 
         {/* Intro */}
-        <Row className="mb-5">
-          <Col md={{ span: 10, offset: 1 }}>
-            <p className="lead text-center fst-italic " style={{color:"#4993e2ff", fontSize: "1rem",fontWeight: "400"}}>
-              BelAfia is your all-in-one destination for authentic Indian
-              cuisine, cereal-infused ice cream, and refreshing specialty drinks
+        <Row className="justify-content-center mb-4 mb-md-5">
+          <Col xs={12} md={10} lg={8}>
+            <p
+              className="text-center fst-italic"
+              style={{
+                color: "#4993e2",
+                fontSize: "1rem",
+                fontWeight: 400,
+                lineHeight: "1.7",
+              }}
+            >
+              BelAfia is your all-in-one destination for flavorful comfort
+              foods, cereal-infused ice cream, and refreshing specialty drinks
               — all under one roof. Located at 3245 W Ray Rd in Chandler, AZ, we
-              blend comfort food, creativity, and culture in a warm,
+              blend creativity, culture, and great taste in a warm,
               family-friendly atmosphere.
             </p>
           </Col>
         </Row>
 
-        {/* Food & Dessert Sections */}
-        <Row className="mb-5">
-          <Col md={6} className="mb-4">
-            <Card className="h-100 shadow-sm">
+        {/* Food & Dessert */}
+        <Row className="g-4 mb-4 mb-md-5">
+          <Col xs={12} md={6}>
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <Card.Title className="text-success fw-bold">
-                  Authentic Indian Cuisine
+                <Card.Title className="text-success fw-bold mb-3">
+                  Flavorful Comfort Food
                 </Card.Title>
-                <Card.Text>
-                  Our menu brings together the best of North and South Indian
-                  flavors — creamy curries, aromatic biryanis, freshly baked
-                  naan, and delicious vegetarian favorites. Every dish is made
-                  with traditional spices, fresh ingredients, and time-honored
-                  recipes that reflect the rich culinary heritage of India.
+                <Card.Text className="text-muted">
+                  Our menu brings together a variety of rich and satisfying
+                  flavors — from creamy dishes and aromatic rice plates to
+                  freshly baked breads and delicious vegetarian options. Every
+                  dish is prepared with fresh ingredients and bold seasonings
+                  to deliver a memorable dining experience.
                 </Card.Text>
               </Card.Body>
             </Card>
           </Col>
 
-          <Col md={6} className="mb-4">
-            <Card className="h-100 shadow-sm">
+          <Col xs={12} md={6}>
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <Card.Title className="text-success fw-bold">
+                <Card.Title className="text-success fw-bold mb-3">
                   Cereal-Infused Ice Cream
                 </Card.Title>
-                <Card.Text>
+                <Card.Text className="text-muted">
                   For dessert lovers, we create premium ice cream blended with
                   your favorite cereals — from Cinnamon Toast Crunch and Oreos
                   to Fruity Pebbles and more. It’s rich, playful, and nostalgic,
@@ -57,16 +69,16 @@ const About: React.FC = () => {
           </Col>
         </Row>
 
-        {/* Drinks Section */}
-        <Row className="mb-5">
-          <Col md={{ span: 8, offset: 2 }}>
-            <Card className="shadow-sm">
+        {/* Drinks */}
+        <Row className="justify-content-center mb-4 mb-md-5">
+          <Col xs={12} md={10} lg={8}>
+            <Card className="shadow-sm border-0">
               <Card.Body>
-                <Card.Title className="text-success fw-bold">
+                <Card.Title className="text-success fw-bold mb-3">
                   Matcha, Boba & Specialty Drinks
                 </Card.Title>
-                <Card.Text>
-                  Sip on our refreshing lineup of drinks: premium Japanese
+                <Card.Text className="text-muted">
+                  Sip on our refreshing lineup of drinks including premium
                   matcha, classic boba milk teas, layered fruit teas, signature
                   chillers, and cold-brew coffee blends. Whether you’re pairing
                   it with your meal or grabbing a drink to-go, there’s a flavor
@@ -77,36 +89,41 @@ const About: React.FC = () => {
           </Col>
         </Row>
 
-        {/* Experience & Promise Section */}
-        <Row>
-          <Col md={6} className="mb-4">
-            <Card className="h-100 shadow-sm">
+        {/* Experience & Promise */}
+        <Row className="g-4">
+          <Col xs={12} md={6}>
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <Card.Title className="text-success fw-bold">The BelAfia Experience</Card.Title>
-                <ul className="mt-3">
-                  <li>The comfort of homemade Indian food</li>
-                  <li>The fun and nostalgia of cereal-infused ice cream</li>
-                  <li>The freshness of matcha, boba, and specialty drinks</li>
-                  <li>A relaxed and welcoming environment for all</li>
-                </ul>
+                <Card.Title className="text-success fw-bold mb-3">
+                  The BelAfia Experience
+                </Card.Title>
+                <p className="text-muted">
+                  At BelAfia, we combine great food, creative desserts, and
+                  refreshing drinks in a welcoming space. Our goal is to create
+                  a place where families, friends, and food lovers can gather,
+                  relax, and enjoy a memorable dining experience together.
+                </p>
               </Card.Body>
             </Card>
           </Col>
 
-          <Col md={6} className="mb-4">
-            <Card className="h-100 shadow-sm">
+          <Col xs={12} md={6}>
+            <Card className="h-100 shadow-sm border-0">
               <Card.Body>
-                <Card.Title className="text-success fw-bold">Our Promise</Card.Title>
-                <p className="mt-3">
-                  Whether you're craving a rich Indian dinner, a creamy dessert, 
-                  or a refreshing drink, BelAfia is dedicated to delivering 
-                  consistent quality, bold flavors, and a memorable experience 
-                  every time you walk through our doors.
+                <Card.Title className="text-success fw-bold mb-3">
+                  Our Promise
+                </Card.Title>
+                <p className="text-muted">
+                  Whether you're craving a satisfying meal, a creamy dessert, or
+                  a refreshing drink, BelAfia is dedicated to delivering
+                  consistent quality, bold flavors, and a memorable experience
+                  every time you visit.
                 </p>
               </Card.Body>
             </Card>
           </Col>
         </Row>
+
       </Container>
     </section>
   );

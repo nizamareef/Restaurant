@@ -1,60 +1,87 @@
 // src/components/Navbar.tsx
-import React from "react";
+import React, { useState } from "react";
 import { Navbar as BsNavbar, Nav, Container, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import "../App.css";
 
 const Navbar: React.FC = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  const handleNavClick = () => {
+    setExpanded(false); // close navbar after click
+  };
+
   return (
     <BsNavbar
       expand="lg"
       fixed="top"
-      className="shadow-sm navbar-custom"
-      style={{ backgroundColor: "#ffffff" }}
+      bg="white"
+      expanded={expanded}
+      className="shadow-sm"
     >
       <Container>
-        <BsNavbar.Brand as={NavLink} to="/" className="brand-name">
+        <BsNavbar.Brand
+          as={NavLink}
+          to="/"
+          onClick={handleNavClick}
+          className="fw-bold fs-4"
+        >
           <span className="text-success">BEL</span>
           <span className="text-primary">AFIA</span>
         </BsNavbar.Brand>
 
-        <BsNavbar.Toggle aria-controls="navbar-nav" />
-        <BsNavbar.Collapse id="navbar-nav" className="justify-content-end">
-          <Nav className="gap-4 fw-semibold align-items-center">
-            <Nav.Link as={NavLink} to="/" className="text-dark">
+        <BsNavbar.Toggle
+          aria-controls="navbar-nav"
+          onClick={() => setExpanded(expanded ? false : true)}
+        />
+
+        <BsNavbar.Collapse id="navbar-nav">
+          <Nav className="ms-auto align-items-lg-center text-center text-lg-start">
+
+            <Nav.Link as={NavLink} to="/" onClick={handleNavClick}>
               Home
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/menu" className="text-dark">
+            <Nav.Link as={NavLink} to="/menu" onClick={handleNavClick}>
               Menu
             </Nav.Link>
 
-            <Nav.Link as={NavLink} to="/about" className="text-dark">
+            <Nav.Link as={NavLink} to="/catering" onClick={handleNavClick}>
+              Catering
+            </Nav.Link>
+
+            <Nav.Link as={NavLink} to="/about" onClick={handleNavClick}>
               About
             </Nav.Link>
 
-            <div className="d-flex align-items-center gap-2">
-              <Nav.Link as={NavLink} to="/contact" className="text-dark">
-                Contact Us
-              </Nav.Link>
+            <Nav.Link as={NavLink} to="/contact" onClick={handleNavClick}>
+              Contact
+            </Nav.Link>
+
+            <div className="my-3 my-lg-0 mx-lg-2 text-center">
               <img
                 src="/images/Fusion_Food/Halal.jpg"
                 alt="Halal Certified"
-                className="halal-nav-logo"
+                style={{ height: "40px" }}
               />
             </div>
 
-            {/* Order Now Button -> External Site */}
-            <a
-              href="https://www.doordash.com/store/xrewind-soft-serve-+-tea-+-biryani-+-sandwich-chandler-23096655/688139/?pickup=true"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-            >
-              <Button variant="success" className="px-4 rounded-pill">
-                Order Now
-              </Button>
-            </a>
+            <div className="my-3 my-lg-0">
+              <a
+                href="https://www.doordash.com/store/xrewind-soft-serve-+-tea-+-biryani-+-sandwich-chandler-23096655/688139/?pickup=true"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-decoration-none"
+                onClick={handleNavClick}
+              >
+                <Button
+                  variant="success"
+                  className="px-4 rounded-pill w-100 w-lg-auto"
+                >
+                  Order Now
+                </Button>
+              </a>
+            </div>
+
           </Nav>
         </BsNavbar.Collapse>
       </Container>
@@ -62,4 +89,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
+export default Navbar

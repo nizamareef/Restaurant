@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Menu from "./pages/Menu";
-import Meat from "./pages/Meat";
+import Catering from "./pages/Catering";;
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 
@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/meat" element={<Meat />} />
+          <Route path="/catering" element={<Catering />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

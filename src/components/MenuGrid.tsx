@@ -15,96 +15,69 @@ const categories = [
 
 type Category = (typeof categories)[number];
 
+interface MenuItem {
+  name: string;
+  description: string;
+}
+
 interface MenuGridProps {
   initialCategory?: Category;
 }
 
-const menuItems: Record<Category, string[]> = {
+const menuItems: Record<Category, MenuItem[]> = {
   "Fusion Food": [
-    "Fries",
-    "Samosa",
-    "Cheese Stick",
-    "Chicken 65",
-    "Falafel",
-    "Chicken Cheese Sandwich",
-    "Meat Ball Sandwich",
-    "Chicken Shawarma Wrap",
-    "Gyro Wrap",
-    "Falafel Wrap",
-    "Greek Salad",
-    "Chicken Salad",
-    "Butter Chicken Masala",
-    "Chicken Tikka Masala",
-    "Plain Naan",
-    "Paneer Butter Masala",
-    "Garlic Naan",
-    "Goat & Chicken Haleem",
-    "Goat Biryani",
-    "Shirazi Salad",
-    "Chicken Biryani",
+    { name: "Fries", description: "Crispy golden fries served hot." },
+    { name: "Samosa", description: "Fried pastry stuffed with spiced potatoes." },
+    { name: "Cheese Stick", description: "Crunchy mozzarella sticks with dipping sauce." },
+    { name: "Chicken 65", description: "Spicy fried chicken tossed with flavorful spices." },
+    { name: "Falafel", description: "Crispy chickpea fritters served with dipping sauce." },
+    { name: "Chicken Cheese Sandwich", description: "Grilled sandwich filled with chicken and cheese." },
+    { name: "Meat Ball Sandwich", description: "Juicy meatballs served in a toasted sandwich." },
+    { name: "Chicken Shawarma Wrap", description: "Seasoned chicken wrapped in soft bread with sauce." },
+    { name: "Gyro Wrap", description: "Tender gyro meat with fresh vegetables and sauce." },
+    { name: "Falafel Wrap", description: "Falafel wrapped with veggies and tahini sauce." },
   ],
 
   "Ice Creams and Milk Shakes": [
-  
-    // Signature Soft-Serve Ice Creams
-    "Minions Treats",
-    "Strawberry Shortcake",
-    "Fruity Tooty",
-    "Thunder Buddies",
-    "Cookies & Cream",
-    "Caramel Apple",
-    "Mint Chocolate",
-    "Chocoholic",
-    "Cookie Crumble",
-    "Matcha Madness",
+    { name: "Minions Treats", description: "Soft serve ice cream topped with cereal crunch." },
+    { name: "Strawberry Shortcake", description: "Strawberry ice cream blended with cookie crumble." },
+    { name: "Fruity Tooty", description: "Colorful cereal blended into creamy ice cream." },
+    { name: "Thunder Buddies", description: "Chocolatey ice cream topped with crunchy treats." },
+    { name: "Cookies & Cream", description: "Classic cookies blended with rich vanilla ice cream." },
   ],
 
   "Milk Teas": [
-    "Thai Tea",
-    "Brown Sugar Milk Tea",
-    "Pink Brush",
-    "Jasmine Milk Tea",
-    "Taro Milk Tea",
-    "Chai Latte",
-    "Caramel Matcha Latte",
+    { name: "Thai Tea", description: "Sweet creamy Thai tea with rich flavor." },
+    { name: "Brown Sugar Milk Tea", description: "Milk tea infused with caramelized brown sugar." },
+    { name: "Pink Brush", description: "Creamy milk tea with a fruity twist." },
+    { name: "Jasmine Milk Tea", description: "Fragrant jasmine tea blended with milk." },
   ],
 
   Matchas: [
-    "Sweet Matcha",
-    "Strawberry Matcha Latte",
-    "Ube Coconut Matcha",
-    "Jasmine Matcha Latte",
-    "Blueberry Matcha Lemonade",
+    { name: "Sweet Matcha", description: "Smooth ceremonial matcha with light sweetness." },
+    { name: "Strawberry Matcha Latte", description: "Layered matcha and strawberry milk." },
+    { name: "Ube Coconut Matcha", description: "Creamy coconut matcha with ube flavor." },
   ],
 
   "Crafted Teas": [
-    "Mango Black Tea",
-    "Jasmine Green Tea",
-    "Chrysanthemum Immuni-Tea",
-    "Butterfly Rose Lemonade",
+    { name: "Mango Black Tea", description: "Refreshing black tea infused with mango." },
+    { name: "Jasmine Green Tea", description: "Light floral green tea." },
   ],
 
   "Blended Drinks": [
-    "Taro Crush",
-    "Strawberry Cream",
-    "Brown Sugar Crush",
-    "Thai Tea Crush",
+    { name: "Taro Crush", description: "Blended taro drink with creamy texture." },
+    { name: "Strawberry Cream", description: "Smooth strawberry blended drink." },
   ],
 
   "Caffeine-Free": [
-    "Rose Milk Latte",
-    "Blueberry Strawberry Lemonade",
-    "Honey Chrysanthemum",
-    "Butterfly Rose Lemonade",
+    { name: "Rose Milk Latte", description: "Creamy milk drink infused with rose." },
+    { name: "Blueberry Strawberry Lemonade", description: "Fresh lemonade with berry flavors." },
   ],
 
   Coffees: [
-    "Signature House Coffee",
-    "Matcha Coffee",
-    "Lavender Coffee",
-    "Basic House Coffee",
-    "Brewed Coffee",
-    "Honey Chrysanthemum Americano",
+    { name: "Signature House Coffee", description: "Our signature brewed coffee blend." },
+    { name: "Matcha Coffee", description: "Unique fusion of matcha and coffee." },
+    { name: "Lavender Coffee", description: "Smooth coffee infused with lavender aroma." },
   ],
 };
 
@@ -125,22 +98,18 @@ const MenuGrid: React.FC<MenuGridProps> = ({ initialCategory }) => {
 
   return (
     <div className="container mt-4">
+
       {/* Category Buttons */}
-      <div
-        className="d-flex justify-content-center flex-wrap gap-2 mb-4"
-        style={{ rowGap: "6px" }}
-      >
+      <div className="d-flex justify-content-center flex-wrap gap-2 mb-4">
         {categories.map((cat) => (
           <Button
             key={cat}
-            variant={selectedCategory === cat ? "success" : "outline-white"}
+            variant={selectedCategory === cat ? "success" : "outline-secondary"}
             onClick={() => setSelectedCategory(cat)}
             style={{
-              color: selectedCategory === cat ? "white" : "black",
               fontWeight: 600,
-              fontSize: "0.85rem",
-              minWidth: 100,
-              padding: "6px 10px",
+              fontSize: "0.8rem",
+              padding: "5px 10px",
               borderRadius: "8px",
             }}
           >
@@ -149,66 +118,72 @@ const MenuGrid: React.FC<MenuGridProps> = ({ initialCategory }) => {
         ))}
       </div>
 
-      {/* Ice Cream Info Box */}
-      {selectedCategory === "Ice Creams and Milk Shakes" && (
-        <div
-          style={{
-            backgroundColor: "#f8f9fa",
-            borderRadius: "12px",
-            padding: "20px",
-            textAlign: "center",
-            marginBottom: "25px",
-            boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
-          }}
-        >
-          <h4>🍦 Ice Creams</h4>
-          <p style={{ margin: 0, color: "#333" }}>
-            We offer a variety of <strong>Vegan</strong> and{" "}
-            <strong>Regular Ice Creams</strong>, along with our{" "}
-            <strong>Signature Soft Serves</strong>. You can also{" "}
-            <strong>customize or build your own swirl</strong> — choose your
-            favorite cereals, toppings, and mix-ins to create the perfect treat!
-          </p>
-        </div>
-      )}
-
       <h3 className="text-center mb-4 fw-bold">{selectedCategory}</h3>
 
-      <Row xs={1} md={4} className="g-4">
-        {menuItems[selectedCategory].length === 0 ? (
-          <Col>
-            <p className="text-center text-muted">No items available yet.</p>
-          </Col>
-        ) : (
-          menuItems[selectedCategory].map((item) => (
-            <Col key={item}>
-              <Card className="shadow-sm border-0 h-100">
-                <Card.Img
-                  variant="top"
+      {/* Menu Grid */}
+      <Row xs={2} sm={2} md={3} lg={4} className="g-3">
+
+        {menuItems[selectedCategory].map((item) => (
+          <Col key={item.name}>
+
+            <Card
+              className="border-0 shadow-sm h-100"
+              style={{
+                borderRadius: "12px",
+                overflow: "hidden",
+              }}
+            >
+
+              <Card.Img
+                variant="top"
+                src={getImagePath(item.name, selectedCategory)}
+                alt={item.name}
+                style={{
+                  height: "clamp(110px, 22vw, 200px)",
+                  objectFit: "contain",
+                  background: "#f8f9fa",
+                  padding: "8px",
+                }}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = `https://via.placeholder.com/250x150?text=${encodeURIComponent(
+                    item.name
+                  )}`;
+                }}
+              />
+
+              <Card.Body
+                style={{
+                  padding: "8px",
+                  textAlign: "center",
+                }}
+              >
+                <Card.Title
                   style={{
-                    height: "220px",
-                    objectFit: "cover",
-                    borderTopLeftRadius: "0.5rem",
-                    borderTopRightRadius: "0.5rem",
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                    marginBottom: "4px",
                   }}
-                  src={getImagePath(item, selectedCategory)}
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `https://via.placeholder.com/300x150?text=${encodeURIComponent(
-                      item
-                    )}`;
+                >
+                  {item.name}
+                </Card.Title>
+
+                <Card.Text
+                  style={{
+                    fontSize: "0.72rem",
+                    color: "#6c757d",
+                    margin: 0,
                   }}
-                  alt={item}
-                />
-                <Card.Body className="d-flex flex-column justify-content-center p-0">
-                  <Card.Title className="text-center fw-bold">
-                    {item}
-                  </Card.Title>
-                </Card.Body>
-              </Card>
-            </Col>
-          ))
-        )}
+                >
+                  {item.description}
+                </Card.Text>
+              </Card.Body>
+
+            </Card>
+
+          </Col>
+        ))}
+
       </Row>
     </div>
   );
