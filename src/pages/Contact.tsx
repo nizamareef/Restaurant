@@ -1,60 +1,166 @@
 import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Helmet } from "react-helmet-async";
 
 const Contact: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Contact BelAfia | Fusion Restaurant in Chandler AZ</title>
-        <meta name="description" content="Contact BelAfia at 3245 W Ray Rd #3, Chandler AZ 85226. Call 480-361-9936." />
+        <title>Contact BelAfia | Fusion Restaurant in Chandler AZ – 480-361-9936</title>
+        <meta name="description" content="Contact BelAfia at 3245 W Ray Rd #3, Chandler AZ 85226. Call us at 480-361-9936. Indian, Persian & Mediterranean fusion food, boba drinks and vegan ice creams." />
+        <meta property="og:title" content="Contact BelAfia | Chandler AZ Fusion Restaurant" />
+        <meta property="og:description" content="Visit BelAfia at 3245 W Ray Rd #3, Chandler AZ 85226 or call 480-361-9936." />
+        <meta property="og:url" content="https://www.azbelafia.com/contact" />
         <link rel="canonical" href="https://www.azbelafia.com/contact" />
       </Helmet>
-      <Container className="mt-4">
-        <h1 className="text-center mb-4">Contact BelAfia</h1>
-        <p className="text-center text-muted mb-5">
-          Visit us at 3245 W Ray Rd #3, Chandler AZ 85226. We'd love to hear from you!
-        </p>
-        <Row className="mb-5 text-center">
-          <Col md={4} className="mb-3">
-            <Card className="shadow-sm border-0 h-100 p-3">
-              <Card.Body>
-                <Card.Title as="h2" className="h5">📞 Phone</Card.Title>
-                <Card.Text>
-                  <a href="tel:+14803619936" className="text-dark text-decoration-none">
-                    +1 480-361-9936
-                  </a>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4} className="mb-3">
-            <Card className="shadow-sm border-0 h-100 p-3">
-              <Card.Body>
-                <Card.Title as="h2" className="h5">📍 Address</Card.Title>
-                <Card.Text>
-                  <a href="https://maps.app.goo.gl/r4PrDiPm8YxPRFAMA" target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none">
-                    3245 W Ray Rd #3, Chandler, AZ 85226
-                  </a>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4} className="mb-3">
-            <Card className="shadow-sm border-0 h-100 p-3">
-              <Card.Body>
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" width="40" className="mb-2" />
-                <Card.Title as="h2" className="h5">Instagram</Card.Title>
-                <Card.Text>
-                  <a href="https://www.instagram.com/belafia3245?igsh=cXhpN3hia3Uydnhw" target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none">
-                    @belafia
-                  </a>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
+
+      {/* HERO */}
+      <section style={{ background: "linear-gradient(135deg, #1a6b3c 0%, #0d4a8f 100%)", padding: "70px 0 60px" }}>
+        <Container className="text-center text-white">
+          <span style={{ fontSize: "52px" }}>📍</span>
+          <h1 className="fw-bold mt-3 mb-3" style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}>
+            Contact BelAfia
+          </h1>
+          <p className="lead" style={{ maxWidth: "550px", margin: "0 auto", opacity: 0.9 }}>
+            We'd love to hear from you! Visit us, call us, or follow us on Instagram.
+          </p>
+        </Container>
+      </section>
+
+      {/* CONTACT CARDS */}
+      <section style={{ padding: "60px 0", background: "#f8f9fa" }}>
+        <Container>
+          <Row className="g-4 justify-content-center">
+
+            {/* Phone */}
+            <Col xs={12} md={4}>
+              <div style={{
+                background: "#fff",
+                borderRadius: "20px",
+                padding: "36px 24px",
+                textAlign: "center",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+                height: "100%",
+                borderTop: "4px solid #1a6b3c"
+              }}>
+                <div style={{ fontSize: "44px", marginBottom: "16px" }}>📞</div>
+                <h2 className="fw-bold mb-2" style={{ fontSize: "1.1rem", color: "#1a6b3c" }}>Phone</h2>
+                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
+                  Call us directly for orders, questions, or catering inquiries.
+                </p>
+                <a
+                  href="tel:+14803619936"
+                  className="btn btn-success rounded-pill px-4 fw-semibold"
+                >
+                  480-361-9936
+                </a>
+              </div>
+            </Col>
+
+            {/* Address */}
+            <Col xs={12} md={4}>
+              <div style={{
+                background: "#fff",
+                borderRadius: "20px",
+                padding: "36px 24px",
+                textAlign: "center",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+                height: "100%",
+                borderTop: "4px solid #0d4a8f"
+              }}>
+                <div style={{ fontSize: "44px", marginBottom: "16px" }}>📍</div>
+                <h2 className="fw-bold mb-2" style={{ fontSize: "1.1rem", color: "#0d4a8f" }}>Address</h2>
+                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
+                  Located in Chandler AZ, near Whole Foods on W Ray Rd.
+                </p>
+                <a
+                  href="https://maps.app.goo.gl/r4PrDiPm8YxPRFAMA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary rounded-pill px-4 fw-semibold"
+                >
+                  Get Directions
+                </a>
+                <p className="text-muted mt-3 mb-0" style={{ fontSize: "0.85rem" }}>
+                  3245 W Ray Rd #3, Chandler, AZ 85226
+                </p>
+              </div>
+            </Col>
+
+            {/* Instagram */}
+            <Col xs={12} md={4}>
+              <div style={{
+                background: "#fff",
+                borderRadius: "20px",
+                padding: "36px 24px",
+                textAlign: "center",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
+                height: "100%",
+                borderTop: "4px solid #e1306c"
+              }}>
+                <div style={{ fontSize: "44px", marginBottom: "16px" }}>
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                    alt="BelAfia Instagram"
+                    width="44"
+                  />
+                </div>
+                <h2 className="fw-bold mb-2" style={{ fontSize: "1.1rem", color: "#e1306c" }}>Instagram</h2>
+                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
+                  Follow us for daily specials, new items, and behind the scenes.
+                </p>
+                <a
+                  href="https://www.instagram.com/belafia3245?igsh=cXhpN3hia3Uydnhw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn rounded-pill px-4 fw-semibold text-white"
+                  style={{ background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)" }}
+                >
+                  @belafia3245
+                </a>
+              </div>
+            </Col>
+
+          </Row>
+        </Container>
+      </section>
+
+      {/* MAP EMBED */}
+      <section style={{ padding: "0 0 60px" }}>
+        <Container>
+          <h2 className="text-center fw-bold mb-4">Find Us</h2>
+          <div style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}>
+            <iframe
+              title="BelAfia location on Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.5!2d-111.8773!3d33.3062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDE4JzIyLjMiTiAxMTHCsDUyJzM4LjMiVw!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="350"
+              style={{ border: 0, display: "block" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA */}
+      <section style={{ background: "linear-gradient(135deg, #1a6b3c 0%, #0d4a8f 100%)", padding: "50px 0" }}>
+        <Container className="text-center text-white">
+          <h2 className="fw-bold mb-3">Ready to Order or Book Catering?</h2>
+          <p style={{ opacity: 0.9, maxWidth: "500px", margin: "0 auto 28px" }}>
+            Call us at 480-361-9936 or visit us at 3245 W Ray Rd #3, Chandler AZ.
+          </p>
+          <div className="d-flex justify-content-center flex-wrap gap-3">
+            <a href="tel:+14803619936" className="btn btn-light btn-lg fw-semibold text-success rounded-pill px-4">
+              📞 Call Now
+            </a>
+            <a href="/catering" className="btn btn-outline-light btn-lg fw-semibold rounded-pill px-4">
+              View Catering Menu
+            </a>
+          </div>
+        </Container>
+      </section>
     </>
   );
 };
