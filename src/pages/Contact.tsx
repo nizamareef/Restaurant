@@ -15,109 +15,139 @@ const Contact: React.FC = () => {
       </Helmet>
 
       {/* HERO */}
-      <section style={{ background: "linear-gradient(135deg, #1a6b3c 0%, #0d4a8f 100%)", padding: "70px 0 60px" }}>
-        <Container className="text-center text-white">
-          <span style={{ fontSize: "52px" }}>📍</span>
-          <h1 className="fw-bold mt-3 mb-3" style={{ fontSize: "clamp(1.8rem, 4vw, 2.8rem)" }}>
-            Contact BelAfia
-          </h1>
-          <p className="lead" style={{ maxWidth: "550px", margin: "0 auto", opacity: 0.9 }}>
-            We'd love to hear from you! Visit us, call us, or follow us on Instagram.
-          </p>
-        </Container>
+      <section style={{
+        background: "linear-gradient(135deg, #1a6b3c 0%, #0d4a8f 100%)",
+        padding: "60px 24px 50px",
+        textAlign: "center",
+        color: "#fff"
+      }}>
+        <span style={{ fontSize: "48px" }}>📍</span>
+        <h1 className="fw-bold mt-3 mb-3" style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}>
+          Contact BelAfia
+        </h1>
+        <p style={{ maxWidth: "480px", margin: "0 auto", opacity: 0.9, fontSize: "1rem", lineHeight: 1.6 }}>
+          We'd love to hear from you! Visit us, call us, or follow us on Instagram.
+        </p>
       </section>
 
       {/* CONTACT CARDS */}
-      <section style={{ padding: "60px 0", background: "#f8f9fa" }}>
+      <section style={{ padding: "40px 0 50px", background: "#f8f9fa" }}>
         <Container>
-          <Row className="g-4 justify-content-center">
+          <Row className="g-4 justify-content-center align-items-stretch">
 
             {/* Phone */}
-            <Col xs={12} md={4}>
+            <Col xs={12} sm={10} md={4} className="d-flex">
               <div style={{
                 background: "#fff",
-                borderRadius: "20px",
-                padding: "36px 24px",
+                borderRadius: "24px",
+                padding: "40px 28px",
                 textAlign: "center",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-                height: "100%",
-                borderTop: "4px solid #1a6b3c"
+                boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+                borderTop: "4px solid #1a6b3c",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                width: "100%",
               }}>
-                <div style={{ fontSize: "44px", marginBottom: "16px" }}>📞</div>
-                <h2 className="fw-bold mb-2" style={{ fontSize: "1.1rem", color: "#1a6b3c" }}>Phone</h2>
-                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
-                  Call us directly for orders, questions, or catering inquiries.
-                </p>
-                <a
-                  href="tel:+14803619936"
-                  className="btn btn-success rounded-pill px-4 fw-semibold"
-                >
-                  480-361-9936
-                </a>
+                <div>
+                  <div style={{ fontSize: "48px", marginBottom: "16px" }}>📞</div>
+                  <h2 className="fw-bold mb-2" style={{ fontSize: "1.2rem", color: "#1a6b3c" }}>Phone</h2>
+                  <p className="text-muted mb-4" style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                    Call us directly for orders, questions, or catering inquiries.
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="tel:+14803619936"
+                    className="btn btn-success rounded-pill px-4 py-2 fw-semibold"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    480-361-9936
+                  </a>
+                </div>
               </div>
             </Col>
 
             {/* Address */}
-            <Col xs={12} md={4}>
+            <Col xs={12} sm={10} md={4} className="d-flex">
               <div style={{
                 background: "#fff",
-                borderRadius: "20px",
-                padding: "36px 24px",
+                borderRadius: "24px",
+                padding: "40px 28px",
                 textAlign: "center",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-                height: "100%",
-                borderTop: "4px solid #0d4a8f"
+                boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+                borderTop: "4px solid #0d4a8f",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                width: "100%",
               }}>
-                <div style={{ fontSize: "44px", marginBottom: "16px" }}>📍</div>
-                <h2 className="fw-bold mb-2" style={{ fontSize: "1.1rem", color: "#0d4a8f" }}>Address</h2>
-                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
-                  Located in Chandler AZ, near Whole Foods on W Ray Rd.
-                </p>
-                <a
-                  href="https://maps.app.goo.gl/r4PrDiPm8YxPRFAMA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary rounded-pill px-4 fw-semibold"
-                >
-                  Get Directions
-                </a>
-                <p className="text-muted mt-3 mb-0" style={{ fontSize: "0.85rem" }}>
-                  3245 W Ray Rd #3, Chandler, AZ 85226
-                </p>
+                <div>
+                  <div style={{ fontSize: "48px", marginBottom: "16px" }}>🗺️</div>
+                  <h2 className="fw-bold mb-2" style={{ fontSize: "1.2rem", color: "#0d4a8f" }}>Address</h2>
+                  <p className="text-muted mb-2" style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                    Located in Chandler AZ, near Whole Foods on W Ray Rd.
+                  </p>
+                  <p className="text-muted mb-4" style={{ fontSize: "0.85rem" }}>
+                    3245 W Ray Rd #3, Chandler, AZ 85226
+                  </p>
+                </div>
+                <div>
+                  <a
+                    href="https://maps.app.goo.gl/r4PrDiPm8YxPRFAMA"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary rounded-pill px-4 py-2 fw-semibold"
+                    style={{ fontSize: "1rem" }}
+                  >
+                    Get Directions
+                  </a>
+                </div>
               </div>
             </Col>
 
             {/* Instagram */}
-            <Col xs={12} md={4}>
+            <Col xs={12} sm={10} md={4} className="d-flex">
               <div style={{
                 background: "#fff",
-                borderRadius: "20px",
-                padding: "36px 24px",
+                borderRadius: "24px",
+                padding: "40px 28px",
                 textAlign: "center",
-                boxShadow: "0 4px 20px rgba(0,0,0,0.07)",
-                height: "100%",
-                borderTop: "4px solid #e1306c"
+                boxShadow: "0 4px 24px rgba(0,0,0,0.07)",
+                borderTop: "4px solid #e1306c",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                width: "100%",
               }}>
-                <div style={{ fontSize: "44px", marginBottom: "16px" }}>
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-                    alt="BelAfia Instagram"
-                    width="44"
-                  />
+                <div>
+                  <div style={{ marginBottom: "16px" }}>
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
+                      alt="BelAfia Instagram"
+                      width="48"
+                    />
+                  </div>
+                  <h2 className="fw-bold mb-2" style={{ fontSize: "1.2rem", color: "#e1306c" }}>Instagram</h2>
+                  <p className="text-muted mb-4" style={{ fontSize: "0.95rem", lineHeight: 1.6 }}>
+                    Follow us for daily specials, new items, and behind the scenes.
+                  </p>
                 </div>
-                <h2 className="fw-bold mb-2" style={{ fontSize: "1.1rem", color: "#e1306c" }}>Instagram</h2>
-                <p className="text-muted mb-3" style={{ fontSize: "0.9rem" }}>
-                  Follow us for daily specials, new items, and behind the scenes.
-                </p>
-                <a
-                  href="https://www.instagram.com/belafia3245?igsh=cXhpN3hia3Uydnhw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn rounded-pill px-4 fw-semibold text-white"
-                  style={{ background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)" }}
-                >
-                  @belafia3245
-                </a>
+                <div>
+                  <a
+                    href="https://www.instagram.com/belafia3245?igsh=cXhpN3hia3Uydnhw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn rounded-pill px-4 py-2 fw-semibold text-white"
+                    style={{
+                      background: "linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)",
+                      fontSize: "1rem",
+                      border: "none"
+                    }}
+                  >
+                    @belafia3245
+                  </a>
+                </div>
               </div>
             </Col>
 
@@ -125,16 +155,16 @@ const Contact: React.FC = () => {
         </Container>
       </section>
 
-      {/* MAP EMBED */}
-      <section style={{ padding: "0 0 60px" }}>
+      {/* MAP */}
+      <section style={{ padding: "0 0 50px" }}>
         <Container>
           <h2 className="text-center fw-bold mb-4">Find Us</h2>
-          <div style={{ borderRadius: "20px", overflow: "hidden", boxShadow: "0 4px 20px rgba(0,0,0,0.1)" }}>
+          <div style={{ borderRadius: "24px", overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,0.1)" }}>
             <iframe
               title="BelAfia location on Google Maps"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.5!2d-111.8773!3d33.3062!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDE4JzIyLjMiTiAxMTHCsDUyJzM4LjMiVw!5e0!3m2!1sen!2sus!4v1234567890"
               width="100%"
-              height="350"
+              height="320"
               style={{ border: 0, display: "block" }}
               allowFullScreen
               loading="lazy"
@@ -145,17 +175,26 @@ const Contact: React.FC = () => {
       </section>
 
       {/* CTA */}
-      <section style={{ background: "linear-gradient(135deg, #1a6b3c 0%, #0d4a8f 100%)", padding: "50px 0" }}>
+      <section style={{
+        background: "linear-gradient(135deg, #1a6b3c 0%, #0d4a8f 100%)",
+        padding: "50px 24px"
+      }}>
         <Container className="text-center text-white">
           <h2 className="fw-bold mb-3">Ready to Order or Book Catering?</h2>
-          <p style={{ opacity: 0.9, maxWidth: "500px", margin: "0 auto 28px" }}>
+          <p style={{ opacity: 0.9, maxWidth: "480px", margin: "0 auto 28px", lineHeight: 1.6 }}>
             Call us at 480-361-9936 or visit us at 3245 W Ray Rd #3, Chandler AZ.
           </p>
           <div className="d-flex justify-content-center flex-wrap gap-3">
-            <a href="tel:+14803619936" className="btn btn-light btn-lg fw-semibold text-success rounded-pill px-4">
+            <a
+              href="tel:+14803619936"
+              className="btn btn-light btn-lg fw-semibold text-success rounded-pill px-4"
+            >
               📞 Call Now
             </a>
-            <a href="/catering" className="btn btn-outline-light btn-lg fw-semibold rounded-pill px-4">
+            <a
+              href="/catering"
+              className="btn btn-outline-light btn-lg fw-semibold rounded-pill px-4"
+            >
               View Catering Menu
             </a>
           </div>
